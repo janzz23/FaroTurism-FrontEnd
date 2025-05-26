@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container">
+    <div class="wrapper">
+        <form action="#" (ngSubmit)="login()" #loginForm="ngForm">
+            <h2>Iniciar sesión </h2>
+            <div class="input-field">
+                <input type="email" name="email" [(ngModel)]="usuario.email" id="email" placeholder=" " required>
+                <label for="email">Tu correo</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" name="password" id="password" [(ngModel)]="usuario.password" placeholder=" "
+                    required>
+                <label for="password">Tu contraseña 
+                </label>
+                
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Recordar contraseña</p>
+                </label>
+                <a href="#">Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+            <div class="register">
+                <p>No tienes una cuneta<a href="#"> Registrate</a></p>
+            </div>
+        </form>
+    </div>
+</div>
