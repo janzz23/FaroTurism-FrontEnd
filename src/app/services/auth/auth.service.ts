@@ -6,7 +6,7 @@ import { environment } from '../../environments/environments';
   providedIn: 'root',
 })
 export class AuthService {
-  apiUri = 'app/';
+  apiUri = '/app/';
 
   httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -14,15 +14,19 @@ export class AuthService {
 
   registerUser(data: any): Observable<any> {
     return this.http.post<any>(
-      this.apiUri + 'register',
+      environment.apiUrl + this.apiUri + 'register',
       data
       // no pasamos headers: el browser pone multipart/form-data con el boundary
     );
   }
 
   loginUser(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUri + 'login', data, {
-      headers: this.httpOptions,
-    });
+    return this.http.post<any>(
+      environment.apiUrl + this.apiUri + 'login',
+      data,
+      {
+        headers: this.httpOptions,
+      }
+    );
   }
 }

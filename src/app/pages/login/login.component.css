@@ -6,17 +6,23 @@
     box-sizing: border-box;
     outline: none;
     font-family: "Open Sans", sans-serif;
+    -webkit-tap-highlight-color: transparent;
 
 }
 
+
+
+
+
 .container {
-    position: relative;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    
     height: 100vh;
-    overflow: hidden;
+
     /* evita que el fondo genere scroll */
 }
 

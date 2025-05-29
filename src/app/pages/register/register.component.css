@@ -1,147 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 
-
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 
 }
+
 
 .container {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
 
-    /* evita que el fondo genere scroll */
+
+  /* evita que el fondo genere scroll */
 }
 
 .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../../assets/img/wp2777318.webp") center/cover no-repeat;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../assets/img/wp2777318.webp") center/cover no-repeat;
+  z-index: -1;
 }
 
 .wrapper {
 
-    margin-top: 1rem;
-    width: 400px;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+  margin-top: 1rem;
+  width: 400px;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .input-field {
-    position: relative;
-    border-bottom: 2px solid #ccc;
-    margin: 15px 0;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
 }
 
 .input-field label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.15s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
 }
 
 .input-field input {
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #fff;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
 }
 
 .input-field input:focus~label,
 .input-field input:not(:placeholder-shown)~label {
-    font-size: 0.8rem;
-    top: 10px;
-    transform: translateY(-120%);
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
 }
 
 .forget {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 25px 0 35px 0;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
 }
 
 #remember {
-    accent-color: #fff;
+  accent-color: #fff;
 }
 
 .forget label {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .forget label p {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 .wrapper a {
-    color: #efefef;
-    text-decoration: none;
+  color: #efefef;
+  text-decoration: none;
 }
 
 .wrapper a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 button {
-    background: #fff;
-    color: #000;
-    font-weight: 600;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 3px;
-    font-size: 16px;
-    border: 2px solid transparent;
-    transition: 0.3s ease;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
 }
 
 button:hover {
-    color: #fff;
-    border-color: #fff;
-    background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .register {
-    text-align: center;
-    margin-top: 30px;
-    color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
 }
 
 .checkbox-field {
@@ -164,7 +167,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 12px;
   border-radius: 8px;
   backdrop-filter: blur(4px);
@@ -192,13 +195,16 @@ button:hover {
   color: #fff;
   font-size: 0.9rem;
 }
+
 /* 2) Preparamos el recuadro habitual */
 .checkbox-group span::before {
   content: "";
   position: absolute;
-  left: 0; top: 50%;
+  left: 0;
+  top: 50%;
   transform: translateY(-50%) scale(1);
-  width: 18px; height: 18px;
+  width: 18px;
+  height: 18px;
   border: 2px solid #fff;
   border-radius: 4px;
   background: transparent;
@@ -212,6 +218,7 @@ button:hover {
     transform: translateY(-50%) scale(0);
     opacity: 0.5;
   }
+
   100% {
     transform: translateY(-50%) scale(2.5);
     opacity: 0;
@@ -219,17 +226,18 @@ button:hover {
 }
 
 /* 4) Al marcar, primero disparamos el ripple */
-.checkbox-group input:checked + span::before {
+.checkbox-group input:checked+span::before {
   background: #fff;
   border-color: #fff;
   animation: ripple 0.5s ease-out;
 }
 
 /* 5) El check */
-.checkbox-group input:checked + span::after {
+.checkbox-group input:checked+span::after {
   content: "✓";
   position: absolute;
-  left: 4px; top: 50%;
+  left: 4px;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 12px;
   color: #000;
