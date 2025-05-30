@@ -1,28 +1,38 @@
 <app-header></app-header>
 <!-- home.component.html -->
 <div class="home-container">
-    
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Faro<span>Turismo</span>App</h1>
-      <p class="hero-subtitle">Iluminando tu experiencia turística en el</p>
+      <p class="hero-subtitle">Iluminando tu experiencia turística en el mundo</p>
       <div class="cta-buttons">
-        <button class="primary-btn">Explorar Guías</button>
-        <button class="secondary-btn">Registrarse</button>
+        <a routerLink="/register">
+          <button class="secondary-btn">Registrarse</button>
+        </a>
+        <a routerLink="/guias">
+          <button class="primary-btn">Explorar Guías</button>
+        </a>
       </div>
     </div>
-    
- 
+
+
   </section>
-     <div class="wave-divider">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#1a237e"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#1a237e"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#1a237e"></path>
-      </svg>
-    </div>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+        opacity=".25" fill="#1a237e"></path>
+      <path
+        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+        opacity=".5" fill="#1a237e"></path>
+      <path
+        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+        fill="#1a237e"></path>
+    </svg>
+  </div>
 
   <!-- About Section -->
   <section class="about-section">
@@ -30,13 +40,15 @@
       <h2 class="section-title">¿Por qué <span>FaroTurismoApp</span>?</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Elegimos ese nombre porque al plantear nuestra solución sabemos que es una aplicación de guías turísticos y turistas. El faro representa al guía, esa luz que orienta y muestra el camino seguro.</p>
-          <p>Nuestro grupo <strong>RAMDELFARO</strong> ha creado esta plataforma para transformar la experiencia turística en el.</p>
+          <p>Elegimos ese nombre porque al plantear nuestra solución sabemos que es una aplicación de guías turísticos y
+            turistas. El faro representa al guía, esa luz que orienta y muestra el camino seguro.</p>
+          <p>Nuestro grupo <strong>RAMDELFARO</strong> ha creado esta plataforma para transformar la experiencia
+            turística en el.</p>
         </div>
         <div class="about-image">
           <div class="image-container">
-        
-          
+
+
           </div>
         </div>
       </div>
@@ -53,21 +65,24 @@
             <i class="fas fa-exclamation-triangle"></i>
           </div>
           <h3>El desafío</h3>
-          <p>La seguridad para los turistas en el puede ser difícil de controlar, con el Estado a menudo incapaz de ofrecer suficientes garantías debido a limitaciones económicas.</p>
+          <p>La seguridad para los turistas en el puede ser difícil de controlar, con el Estado a menudo incapaz de
+            ofrecer suficientes garantías debido a limitaciones económicas.</p>
         </div>
         <div class="problem-card animated-card delay-1">
           <div class="card-icon">
             <i class="fas fa-users"></i>
           </div>
           <h3>Para los turistas</h3>
-          <p>Los visitantes desconocen quién les brindará el acompañamiento turístico, enfrentando riesgos al contratar servicios informales.</p>
+          <p>Los visitantes desconocen quién les brindará el acompañamiento turístico, enfrentando riesgos al contratar
+            servicios informales.</p>
         </div>
         <div class="problem-card animated-card delay-2">
           <div class="card-icon">
             <i class="fas fa-user-tie"></i>
           </div>
           <h3>Para los guías</h3>
-          <p>Los guías profesionales deben abordar personas en la calle o depender de agencias, sin poder mostrar directamente sus credenciales y habilidades.</p>
+          <p>Los guías profesionales deben abordar personas en la calle o depender de agencias, sin poder mostrar
+            directamente sus credenciales y habilidades.</p>
         </div>
       </div>
     </div>
@@ -80,10 +95,12 @@
       <div class="solution-content">
         <div class="solution-text">
           <h3>Objetivo General</h3>
-          <p>Construir un ambiente más cálido para el turista, donde pueda conocer anticipadamente a la persona que le brindará acompañamiento, reduciendo riesgos y generando confianza.</p>
-          
+          <p>Construir un ambiente más cálido para el turista, donde pueda conocer anticipadamente a la persona que le
+            brindará acompañamiento, reduciendo riesgos y generando confianza.</p>
+
           <h3>Para los Guías</h3>
-          <p>Facilitamos que los guías se conecten con turistas, mostrando sus credenciales, idiomas, experiencia y permitiéndoles trabajar de manera profesional sin abordajes informales.</p>
+          <p>Facilitamos que los guías se conecten con turistas, mostrando sus credenciales, idiomas, experiencia y
+            permitiéndoles trabajar de manera profesional sin abordajes informales.</p>
         </div>
         <div class="solution-stats">
           <div class="stat-item">
@@ -103,9 +120,15 @@
     </div>
     <div class="wave-divider-bottom">
       <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#1a237e"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#1a237e"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#1a237e"></path>
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" fill="#1a237e"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" fill="#1a237e"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          fill="#1a237e"></path>
       </svg>
     </div>
   </section>
@@ -154,7 +177,8 @@
       <div class="testimonial-slider">
         <div class="testimonial-card">
           <div class="testimonial-content">
-            <p>"FaroTurismoApp ha cambiado completamente mi forma de trabajar como guía turístico. Ahora puedo mostrar mis credenciales y conectarme directamente con turistas interesados."</p>
+            <p>"FaroTurismoApp ha cambiado completamente mi forma de trabajar como guía turístico. Ahora puedo mostrar
+              mis credenciales y conectarme directamente con turistas interesados."</p>
             <div class="testimonial-author">
               <div class="author-image"></div>
               <div class="author-info">
@@ -173,7 +197,9 @@
     <div class="container">
       <h2>¿Listo para una mejor experiencia turística?</h2>
       <p>Únete a FaroTurismoApp y descubre el con seguridad y confianza</p>
-      <button class="primary-btn">Regístrate ahora</button>
+      <a routerLink="/register">
+        <button class="primary-btn">Regístrate ahora</button>
+      </a>
     </div>
   </section>
 

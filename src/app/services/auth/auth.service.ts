@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environments';
+import Cookies from 'js-cookie';
 @Injectable({
   providedIn: 'root',
 })
@@ -26,7 +27,26 @@ export class AuthService {
       data,
       {
         headers: this.httpOptions,
+        withCredentials: true, // <-- muy importante
       }
     );
+  }
+
+  logout(): Observable<any> {
+    Cookies.remove('token');
+    return this.http.post<any>(this.apiUri + 'logout', {});
+  }
+
+  //Comprobar si esta logeado o no
+  loggedIn(): boolean {
+    const token = localStorage.getItem('token'); // O usa sessionStorage si prefieres
+    console.log('Token desde localStorage:', token);
+    return !!token; // Devuelve true si hay token, false si no
+  }
+
+  verifyToken(): Observable<any> {
+    return this.http.get<any>(environment.apiUrl + this.apiUri + 'verify', {
+      withCredentials: true,
+    });
   }
 }

@@ -13,6 +13,7 @@
             <a routerLink="/blogs" class="nav-link">Blogs</a>
         </nav>
 
+        @if(!autenticado){
         <div class="login-button-container">
             <button routerLink="/login" class="login-button">
                 <span>Iniciar Sesión</span>
@@ -21,5 +22,6 @@
                 <span>Registrarse</span>
             </button>
         </div>
+        }
     </header>
 </div>

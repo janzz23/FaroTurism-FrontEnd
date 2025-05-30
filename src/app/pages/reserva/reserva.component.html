@@ -1,0 +1,112 @@
+<div class="reserva-container">
+    <div class="reserva-card" [@fadeIn]>
+        <div class="header">
+            <h2>Reservar Guía Turístico</h2>
+            <div class="progress-bar">
+                <div class="progress-step active">1</div>
+                <div class="progress-line active"></div>
+                <div class="progress-step">2</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">3</div>
+            </div>
+        </div>
+
+        <div class="reserva-content">
+            <!-- Sección de información del guía -->
+            <div class="guia-info">
+                <div class="guia-avatar">
+                    <img [src]="guia.fotoPerfil || 'assets/default-avatar.jpg'" alt="Foto del guía">
+                    <div class="rating">★★★★☆</div>
+                </div>
+                <div class="guia-details">
+                    <h3>{{ guia.nombre }} {{ guia.apellido }}</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> {{ guia.lugarOperacion }}</p>
+                    <p class="price"><strong>{{ guia.costoHora }}</strong> / hora</p>
+
+                    <div class="tags">
+                        <span class="tag" *ngFor="let especialidad of guia.especialidades">{{ especialidad }}</span>
+                    </div>
+
+                    <div class="idiomas">
+                        <h4>Idiomas:</h4>
+                        <div class="idiomas-list">
+                            <span class="idioma" *ngFor="let idioma of guia.idiomasHablados">
+                                {{ idioma }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="description">{{ guia.descripcion }}</p>
+                </div>
+            </div>
+
+            <!-- Formulario de reserva -->
+            <form class="reserva-form" [formGroup]="reservaForm" (ngSubmit)="onSubmit()">
+                <div class="form-section">
+                    <h3>Detalles de la Reserva</h3>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha de la reserva</label>
+                        <input type="date" id="fecha" formControlName="fechaReserva" [min]="today" class="form-control">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="horaInicio">Hora de inicio</label>
+                            <select id="horaInicio" formControlName="horaInicio" class="form-control">
+                                <option *ngFor="let hora of horasDisponibles" [value]="hora">{{ hora }}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="duracion">Duración (horas)</label>
+                            <select id="duracion" formControlName="duracionHoras" class="form-control"
+                                (change)="calcularCosto()">
+                                <option *ngFor="let duracion of duraciones" [value]="duracion">{{ duracion }}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lugarEncuentro">Lugar de encuentro</label>
+                        <input type="text" id="lugarEncuentro" formControlName="lugarEncuentro" class="form-control"
+                            placeholder="Ej: Plaza Principal, Museo Nacional, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notas">Notas adicionales</label>
+                        <textarea id="notas" formControlName="notasAdicionales" class="form-control"
+                            placeholder="Especificaciones especiales, necesidades, etc." rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="resumen-reserva">
+                    <h3>Resumen de Reserva</h3>
+                    <div class="resumen-content">
+                        <div class="resumen-item">
+                            <span>Tarifa por hora:</span>
+                            <span>{{ guia.costoHora | currency }}</span>
+                        </div>
+                        <div class="resumen-item">
+                            <span>Duración:</span>
+                            <span>{{ reservaForm.get('duracionHoras')?.value }} horas</span>
+                        </div>
+                        <div class="resumen-item total">
+                            <span>Total:</span>
+                            <span> $ {{costoTotal}}</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-reservar" [disabled]="!reservaForm.valid">
+                        Confirmar Reserva
+                    </button>
+
+                    <div class="politica-cancelacion">
+                        <p><i class="fas fa-info-circle"></i> Puedes cancelar sin costo hasta 24 horas antes de tu
+                            reserva.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
